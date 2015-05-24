@@ -32,8 +32,7 @@ The original dataset has records of a group of 30 volunteers within an age of [1
 |  3~68 |  signed numeric   | None  |[-1, 1] |
 
 ###5. Names of the variables
-Regarding the readable length of a variable name, the most part of each variable name could be regarded as being well-structured and self-explantory except 'f', or 't' note.   
-The 'f' is replaced as 'freq', therefore, and 't' is replaced by 'time'  
+Regarding the readable length of a variable name, the most part of each variable name could be regarded as being well-structured and self-explantory except 'f', or 't' note. The 'f' is replaced as 'freq', therefore, and 't' is replaced by 'time'  
 And, as all the numeric variables in the new tidy dataset ('hus_tidy.txt') is the mean value for each activity and each subject, the notation of 'mean(act, sub)-' is added.
 
 * mean-freq(act, sub) : Group Mean frequency by each activity type and subject ID
