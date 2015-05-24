@@ -13,6 +13,7 @@
 
 # 0. Cleaning enviroments
 # --- It is recommended to execute 'install.packages("LIBRARY NAME HERE") in the library() before running the script.
+
 # Patching libraries
 library(data.table)
 library(magrittr)
@@ -78,15 +79,13 @@ for (file_name in file_list){
   }  
 }
 
-#PART of 4. ADD descriptive variable names from 'feature.txt' 
-#to X (observed dataset)
+#PART of 4. ADD descriptive variable names from 'feature.txt' to X (observed dataset)
 feature_name <- read.table("./features.txt", header=FALSE, sep=" ")
 data_all <- cbind(dataset, datasety, subject_data)
 colnames(data_all) <-c(t(feature_name[2]), "activity_type", "subject_ID")
 
 
-#2. Extract only the measurements of the mean and SD
-#AND 3. Uses descriptive activity names for ACTIVITY TYPE
+#2. Extract only the measurements of the mean and sd AND 3. Uses descriptive activity names for ACTIVITY TYPE
 
 names_list <- names(data_all)
 
@@ -111,8 +110,7 @@ names(extract_data)<-gsub("(?<![a-zA-Z0-9])t(?!y)", "mean-time-by(act,sub)-", na
 names(extract_data) <-gsub("f", "mean-freq-by(act,sub)-", names(extract_data), perl=TRUE)
 
 
-#5. Create the second, independent tidy data set with the average of each
-#   variable for each activity and each subject
+#5. Create the second, independent tidy data set with the average of each variable for each activity and each subject
 
 #group mean by activity type AND subject ID
 tidy21<-aggregate(extract_data[, 3:68], list(activity_type=extract_data$activity_type, subject_ID=extract_data$subject_ID), mean)
