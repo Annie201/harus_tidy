@@ -24,7 +24,7 @@ The original dataset has records of a group of 30 volunteers within an age of [1
 
 ###3. Number of units(observations): 180
 
-###4. Column locations and widths for each variables
+###4. Column locations for each variables
 |  #Column  | data type  | missing value  |value range  |
 |---|---|---|---|
 |  1 |  factor  |  None | WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING  |
@@ -38,13 +38,16 @@ And, as all the numeric variables in the new tidy dataset ('hus_tidy.txt') is th
 * mean-freq(act, sub) : Group Mean frequency by each activity type and subject ID
 * mean-time(act, sub) : Group Mean time by each activity type and subject ID
 * Body : Body motion information
+* Gravity : Gravity information
 * Gyro : Angular information
 * Acc : Acceleration
 * Mag : Magnitude
 * Jerk : Deviation of acceleration with time
 * X,Y,Z : Axis in 3-Dimensions
 * mean : Mean
-* sd : Standard deviation
+* sd : Standard deviation  
+
+For example, 'mean-time-by(act,sub)-GravityAcc-mean()-Y' means mean time by each activity type and subject ID calculated by using Gravity Acceleration mean of Y axis' and this description is equivalent.
  
 
 
