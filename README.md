@@ -1,4 +1,4 @@
-This is a script for cleaning and tiding dataset of *UCI HAR dataset*.  
+This, 'run_analysis.R' is a script for cleaning and tiding dataset of *UCI HAR dataset*.  
 original dataset URL : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
 **PLEASE** set the working directory as 'setwd(UNZIPPED UCI HAR dataset PATH HERE)'.
 
